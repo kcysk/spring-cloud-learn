@@ -1,1 +1,3 @@
-hello=hello-dev
+server:
+  port: 8093
+hello: hello-dev

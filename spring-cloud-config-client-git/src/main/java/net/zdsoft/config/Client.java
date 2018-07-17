@@ -1,27 +1,29 @@
 /**
- * FileName: GitServer.java
+ * FileName: Client.java
  * Author:   shenke
- * Date:     2018/7/12 下午7:37
+ * Date:     2018/7/13 上午10:26
  * Descriptor:
  */
 package net.zdsoft.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 /**
  * @author shenke
- * @since 2018/7/12 下午7:37
+ * @since 2018/7/13 上午10:26
  */
-@EnableConfigServer
 @SpringBootApplication
 @EnableEurekaClient
-public class GitServer {
+@EnableWebMvc
+@EnableFeignClients
+public class Client {
 
     public static void main(String[] args) {
-        SpringApplication.run(GitServer.class, args);
+        SpringApplication.run(Client.class, args);
     }
 
 }

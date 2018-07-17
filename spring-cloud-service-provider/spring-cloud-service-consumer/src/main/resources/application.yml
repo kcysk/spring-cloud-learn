@@ -1,0 +1,15 @@
+server:
+  port: 8096
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8091/eureka-server/eureka,http://localhost:8094/eureka-server-2/eureka/
+    register-with-eureka: false
+ribbon:
+  eager-load:
+    enabled: true
+#  restclient:
+#    enabled: true
+#    http:
+#      client:
+#        enabled: true

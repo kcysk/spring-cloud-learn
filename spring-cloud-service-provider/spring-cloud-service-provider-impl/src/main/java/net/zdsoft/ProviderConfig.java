@@ -1,27 +1,26 @@
 /**
- * FileName: GitServer.java
+ * FileName: ProviderConfig.java
  * Author:   shenke
- * Date:     2018/7/12 下午7:37
+ * Date:     2018/7/13 下午5:01
  * Descriptor:
  */
-package net.zdsoft.config;
+package net.zdsoft;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 /**
  * @author shenke
- * @since 2018/7/12 下午7:37
+ * @since 2018/7/13 下午5:01
  */
-@EnableConfigServer
 @SpringBootApplication
 @EnableEurekaClient
-public class GitServer {
+@EnableWebMvc
+public class ProviderConfig {
 
     public static void main(String[] args) {
-        SpringApplication.run(GitServer.class, args);
+        SpringApplication.run(ProviderConfig.class, args);
     }
-
 }

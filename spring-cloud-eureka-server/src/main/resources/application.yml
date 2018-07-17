@@ -1,11 +1,13 @@
 server:
-  port: 8081
+  port: 8091
   servlet:
     context-path: /eureka-server
 eureka:
   instance:
     hostname: localhost
   client:
-    register-with-eureka: false
-    fetch-registry: false
-    service-url: http://${eureka.instance.hostname}:${server.port}/${server.servlet.context-path}
+    #独立模式开启
+    #register-with-eureka: false
+    #fetch-registry: false
+    service-url:
+       defaultZone: http://localhost:8094/eureka-server-2/eureka/
